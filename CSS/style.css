@@ -23,3 +23,21 @@ body{
 .buttons:hover{
     background-color:black ;
 }
+#dice{
+    display: block;
+    text-align: center;
+    font-size: 4em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#roll{
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgb(91, 91, 91);
+    border-radius: 5px ;
+    cursor:pointer;
+    text-align: center;
+}
+#subm{
+    font-size: 1em; 
+}
