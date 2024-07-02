@@ -45,4 +45,43 @@ decreasebtn.onclick = function(){
 resetbtn.onclick = function(){
     count=0;
     counterlabel.textContent= count;
-}  
+}
+
+//RNG
+let rndnum;
+roll= document.getElementById("roll");
+dice= document.getElementById("dice");
+roll.onclick = function (){
+    rndnum =Math.floor(Math.random()*6)+1;
+    dice.textContent= rndnum;
+}
+// checker
+let mycheckbox=document.getElementById("mycheckbox");
+let visabtn=document.getElementById("visabtn");
+let mastercardbtn=document.getElementById("mastercardbtn");
+let paypalbtn=document.getElementById("paypalbtn");
+let subm=document.getElementById("subm");
+let subresult=document.getElementById("subresult");
+let paymentresult=document.getElementById("paymentresult");
+
+subm.onclick= function(){
+    if(mycheckbox.checked){
+        subresult.textContent=`You are subscribed`;
+    }
+    else{
+        subresult.textContent=`You are not subscribed`;
+    }
+    
+    if(visabtn.checked){
+        paymentresult.textContent=`You are using Visa`;
+    }
+    else if(mastercardbtn.checked){
+        paymentresult.textContent=`You are using Mastercard`;
+    }
+    else if(paypalbtn.checked){
+        paymentresult.textContent=`You are using Paypal`;
+    }
+    else{
+        paymentresult.textContent=`You must select a payment type`;
+    }
+}
