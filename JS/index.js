@@ -85,3 +85,30 @@ subm.onclick= function(){
         paymentresult.textContent=`You must select a payment type`;
     }
 }
+// CASE
+let marks=document.getElementById("marks");
+let graderes=document.getElementById("graderes");
+let calgrade=document.getElementById("calgrade");
+calgrade.onclick= function(){
+let ma= marks.value;
+switch(true){
+    case ma>= 90:
+    graderes.textContent= `You got A`;
+    break;
+    
+    case ma>= 80:
+    graderes.textContent= `You got B`;
+    break;
+
+    case ma>= 70:
+    graderes.textContent= `You got C`;
+    break;
+
+    case ma>= 60:
+    graderes.textContent= `You got D`;
+    break;
+    
+    default:
+    graderes.textContent= `You got F`;
+}
+}
